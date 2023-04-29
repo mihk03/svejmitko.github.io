@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="css/owl.theme.css">
 	<link rel="stylesheet" href="css/owl.transitions.css">
 	<link rel="stylesheet" href="css/style.css">	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
 </head>
 <body>
 
@@ -26,7 +27,7 @@
 				<a href="#" data-activates="slide-out-left" class="sidenav-control-left"><i class="fa fa-bars"></i></a>
 			</div>
 			<div class="site-title">
-				<a href="index.html" class="logo"><h1>Delicious</h1></a>
+				<a href="index.html" class="logo"><h1 style="color:black;" >DineAr</h1></a>
 			</div>
 			<div class="panel-control-right">
 				<a href="#" data-activates="slide-out-right" class="sidenav-control-right"><i class="fa fa-shopping-bag"></i><span>2</span></a>
@@ -212,7 +213,7 @@
 	<!-- end panel control right -->
 	
 	<!-- slider -->
-	<div class="slider-slick app-pages">
+	<!-- <div class="slider-slick app-pages">
 		<div class="slider-entry">
 			
 			<img src="img/slider1.jpg" alt="">
@@ -247,90 +248,94 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
+
 	<!-- end slider -->
 
 	<!-- offers -->
-	<div class="offers">
-		<div class="container">
-			<div class="row">
-				<div class="col s6">
-					<div class="entry">
-						<i class="fa fa-cutlery"></i>
-						<h5>Master Chef</h5>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-					</div>
-				</div>
-				<div class="col s6">
-					<div class="entry">
-						<i class="fa fa-list"></i>
-						<h5>Many Menu</h5>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col s6">
-					<div class="entry">
-						<i class="fa fa-birthday-cake"></i>
-						<h5>Food Cake</h5>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-					</div>
-				</div>
-				<div class="col s6">
-					<div class="entry">
-						<i class="fa fa-glass"></i>
-						<h5>Juice Drink</h5>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 	<!-- end offers -->
 
 	<!-- open hours -->
-	<div class="open-hours app-section">
-		<div class="container">
-			<div class="app-title">
-				<h4>Open Hours</h4>
-				<ul class="line">
-					<li><i class="fa fa-snowflake-o"></i></li>
-					<li class="line-center"><i class="fa fa-snowflake-o"></i></li>
-					<li><i class="fa fa-snowflake-o"></i></li>
-				</ul>
-			</div>
-			<div class="entry">
-				<h5>Monday - Saturday</h5>
-				<h6>07.00 AM - 12.00 PM</h6>
-				<div class="dividing"></div>
-				<h5>Sunday</h5>
-				<h6>Open 24 Hours</h6>
-			</div>
-		</div>
-	</div>
+	
 	<!-- end open hours -->
 	
 	<!-- menu -->
+	
 	<div class="menu app-section">
 		<div class="container">
 			<div class="app-title">
-				<h4>Specials Menus</h4>
-				<ul class="line">
-					<li><i class="fa fa-snowflake-o"></i></li>
-					<li class="line-center"><i class="fa fa-snowflake-o"></i></li>
-					<li><i class="fa fa-snowflake-o"></i></li>
-				</ul>
+			<p class="text-test1">Изберете категория:</p>
+			
 			</div>
-			<div class="content">
-				<ul class="tabs">
-					<li class="tab"><a href="#t1">Sushi</a></li>
-					<li class="tab"><a href="#t2">Pizza</a></li>
-					<li class="tab"><a href="#t3">Food</a></li>
+ 
+			<style>
+				.swiper {
+					margin-top: 30px;
+				  width: 600px;
+				  height: 100px;
+				}
+			
+				.swiper-slide {
+				  text-align: center;
+				  font-size: 18px;
+				  background: #fff;
+				  display: flex;
+				  justify-content: center;
+				  align-items: center;
+				}
+			
+				.swiper-slide img {
+				  display: block;
+				  width: 100%;
+				  height: 100%;
+				  object-fit: cover;
+				}
+				
+			  </style>
+			
+			
+			
+			  <!-- Swiper -->
+			  <div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<a class="swiper-slide" href="#t1">
+						<img src="img/main.png" alt="Background Image" style="width: 100%; height: 100%; object-fit: cover;">
+					  </a>
+				  <div class="swiper-slide"><img src="img/salads.png" alt=""></div>
+				  <div class="swiper-slide"><img src="img/coiteils.png" alt=""></div>
+				  <div class="swiper-slide"><img src="img/slider1.jpg" alt=""></div>
+			
+				</div>
+				
+			  </div>
+			
+			  <!-- Swiper JS -->
+			  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+			
+			  <!-- Initialize Swiper -->
+			  <script>
+				var swiper = new Swiper(".mySwiper", {
+				  slidesPerView: 3,
+				  spaceBetween: 30,
+				  freeMode: true,
+				  pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				  },
+				  
+				});
+			  </script>
+				
+			<!-- <div class="content">
+				<ul  class="tabs">
+					<h4 class="tab" > <a href="#t1">Основни Ястия</a> </h4>
+					<li class="tab"><a href="#t2"><img src="img/main.png" alt="Коктейли" style="height: 100px; width: 100px;"></a></li>
+					<li class="tab"><a href="#t3">Коктейли</a></li>
 					<li class="tab"><a href="#t4">Drink</a></li>
-				</ul>
+				</ul> -->
 				<div id="t1">
-
+					<p class="text-test">Основни Ястия:</p>
 					<div class="row">
 						<div class="col s6">
 							<div class="entry"
@@ -354,33 +359,94 @@
 										
 									
 								</div>
-								<button class="button"> <a href="https://mihk03.github.io/starter1.html"> <img src="img/atc.png" style="display: block; margin: auto; width: 85%;"></a> </button>
+								<button class="button"> <a href="https://mihk03.github.io/starter1.html"> <img src="img/BUTTON.png" style="display: block; margin: auto; width: 85%;"></a> </button>
 							</div>
 						</div>
 					</div>
-
 					<div class="row">
 						<div class="col s6">
-							<div class="entry">
-								<img src="img/sushi3.png" alt="">
-								<h6><a href="">Sushi Title</a></h6>
-								<div class="rating">
-									<span class="active"><i class="fa fa-star"></i></span>
-									<span class="active"><i class="fa fa-star"></i></span>
-									<span class="active"><i class="fa fa-star"></i></span>
-									<span class=""><i class="fa fa-star"></i></span>
-									<span class=""><i class="fa fa-star"></i></span>
+							<div class="entry"
+								style="background-image: url('img/bg-2.png'); background-size: cover; background-position: center; border-radius: 15px;">
+								<img src="img/meal-2.png"
+									style="width: 70%;  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5); border-radius: 150px;">
+									<div class="info" style="background-color: rgba(0, 0, 0, 0.7); border-radius: 4px; padding: 10px;">
+									<div class="title">
+										<h6 style="color: white;">Пилешки сандвич</h6>
+									</div>
+									
+									<div class="rating">
+										<span class="active"><i class="fa fa-star"></i></span>
+										<span class="active"><i class="fa fa-star"></i></span>
+										<span class="active"><i class="fa fa-star"></i></span>
+										<span class="active"><i class="fa fa-star"></i></span>
+										<span class=""><i class="fa fa-star"></i></span>
+									</div>
+									<h6 style="color:lawngreen">15.99 лв.</h6>
+									<h6 style="color: white; font-size: 9px;">30 МИН | 320 КАЛОРИИ</h6>
+										
+									
 								</div>
-								<div class="price">
-									<h5>$28</h5>
-								</div>
-								<button class="button">ADD TO CART</button>
+								<button class="button"> <a href="https://mihk03.github.io/starter1.html"> <img src="img/BUTTON.png" style="display: block; margin: auto; width: 85%;"></a> </button>
 							</div>
 						</div>
+					</div>
+					<div class="row">
 						<div class="col s6">
+							<div class="entry"
+								style="background-image: url('img/bg-2.png'); background-size: cover; background-position: center; border-radius: 15px;">
+								<img src="img/meal-2.png"
+									style="width: 70%;  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5); border-radius: 150px;">
+									<div class="info" style="background-color: rgba(0, 0, 0, 0.7); border-radius: 4px; padding: 10px;">
+									<div class="title">
+										<h6 style="color: white;">Пилешки сандвич</h6>
+									</div>
+									
+									<div class="rating">
+										<span class="active"><i class="fa fa-star"></i></span>
+										<span class="active"><i class="fa fa-star"></i></span>
+										<span class="active"><i class="fa fa-star"></i></span>
+										<span class="active"><i class="fa fa-star"></i></span>
+										<span class=""><i class="fa fa-star"></i></span>
+									</div>
+									<h6 style="color:lawngreen">15.99 лв.</h6>
+									<h6 style="color: white; font-size: 9px;">30 МИН | 320 КАЛОРИИ</h6>
+										
+									
+								</div>
+								<button class="button"> <a href="https://mihk03.github.io/starter1.html"> <img src="img/BUTTON.png" style="display: block; margin: auto; width: 85%;"></a> </button>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col s6">
+							<div class="entry"
+								style="background-image: url('img/bg-2.png'); background-size: cover; background-position: center; border-radius: 15px;">
+								<img src="img/meal-2.png"
+									style="width: 70%;  box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5); border-radius: 150px;">
+									<div class="info" style="background-color: rgba(0, 0, 0, 0.7); border-radius: 4px; padding: 10px;">
+									<div class="title">
+										<h6 style="color: white;">Пилешки сандвич</h6>
+									</div>
+									
+									<div class="rating">
+										<span class="active"><i class="fa fa-star"></i></span>
+										<span class="active"><i class="fa fa-star"></i></span>
+										<span class="active"><i class="fa fa-star"></i></span>
+										<span class="active"><i class="fa fa-star"></i></span>
+										<span class=""><i class="fa fa-star"></i></span>
+									</div>
+									<h6 style="color:lawngreen">15.99 лв.</h6>
+									<h6 style="color: white; font-size: 9px;">30 МИН | 320 КАЛОРИИ</h6>
+										
+									
+								</div>
+								<button class="button"> <a href="https://mihk03.github.io/starter1.html"> <img src="img/BUTTON.png" style="display: block; margin: auto; width: 85%;"></a> </button>
+							</div>
+						</div>
+					</div>
+					
 							<div class="entry">
-								<img src="img/bg-2.png" alt="">
-								<img src="img/bg-2.png" alt="">
+								
 								<h6><a href="">Sushi Title</a></h6>
 								<div class="rating">
 									<span class="active"><i class="fa fa-star"></i></span>
@@ -690,5 +756,6 @@
 	<script src="js/slick.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </body>
 </html>
