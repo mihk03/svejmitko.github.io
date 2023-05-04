@@ -271,9 +271,9 @@
  
 			<style>
 				.swiper {
-					margin-top: 30px;
+					margin-top: 10px;
 				  width: 600px;
-				  height: 100px;
+				  height: 110px;
 				}
 			
 				.swiper-slide {
@@ -283,6 +283,8 @@
 				  display: flex;
 				  justify-content: center;
 				  align-items: center;
+				  height: 110%;
+				  
 				}
 			
 				.swiper-slide img {
@@ -290,6 +292,8 @@
 				  width: 100%;
 				  height: 100%;
 				  object-fit: cover;
+				  border-radius: 20px;
+				
 				}
 				
 			  </style>
@@ -299,14 +303,15 @@
 			  <!-- Swiper -->
 			  <div class="swiper mySwiper">
 				<div class="swiper-wrapper">
-					<a class="swiper-slide" data-target="t1">
-						<img src="img/main.png" alt="Background Image" style="width: 100%; height: 100%; object-fit: cover;">
-					  </a>
-				  <div class="swiper-slide" data-target="t2"><img src="img/salads.png" alt=""></div>
-				  <div class="swiper-slide"><img src="img/coiteils.png" alt=""></div>
-				  <div class="swiper-slide"><img src="img/slider1.jpg" alt=""></div>
-			
-				</div>
+				  <div class="swiper-slide" data-target="t1"><img src="img/osnovni.png" alt=""></div>
+				  <div class="swiper-slide" data-target="t2"><img src="img/salati.png" alt=""></div>
+				  <div class="swiper-slide" data-target="t3"><img src="img/napitki.png" alt=""></div>
+				  <div class="swiper-slide" data-target="t4"><img src="img/nargile.png" alt=""></div>
+				  <div class="swiper-slide" data-target="t5"><img src="img/nargile.png" alt=""></div>
+				  <div class="swiper-slide" data-target="t6"><img src="img/nargile.png" alt=""></div>
+				  <div class="swiper-slide" data-target="t7"><img src="img/blank.png" alt=""> </div>
+				  <div class="swiper-slide" data-target="t8"><img src="img/blank.png" alt=""> </div>
+				   </div>
 				
 			  </div>
 			
@@ -336,8 +341,9 @@
 					<li class="tab"><a href="#t3">Коктейли</a></li>
 					<li class="tab"><a href="#t4">Drink</a></li>
 				</ul> -->
-				<p class="text-test">Основни Ястия:</p>
+				
 				<div id="t1" class="menu-section">
+					<p class="text-test">Основни Ястия:</p>
 					<div class="row" >
 						<div class="col s6">
 							<div class="entry"
@@ -466,6 +472,7 @@
 					</div>
 				</div>
 				<div id="t2" class="menu-section">
+					<p class="text-test">Салати:</p>
 					<div class="row">
 						<div class="col s6">
 							<div class="entry">
@@ -539,7 +546,8 @@
 						</div>
 					</div>
 				</div>
-				<div id="t3">
+				<div id="t3" class="menu-section">
+					<p class="text-test">Напитки:</p>
 					<div class="row">
 						<div class="col s6">
 							<div class="entry">

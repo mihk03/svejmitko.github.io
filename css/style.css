@@ -54,7 +54,7 @@ body {
 	background: #fff;
 	color: #888;
 	font-family: 'Muli', sans-serif;
-	overflow-x: hidden;
+	
 }
 
 body::-webkit-scrollbar {
@@ -1526,6 +1526,7 @@ font-weight: bold;
 .swiper {
 	width: 100%;
 	height: 100%;
+	
   }
 
   .swiper-slide {
@@ -1535,11 +1536,15 @@ font-weight: bold;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  }
+	
+    
+	  }
+  
 
   .swiper-slide img {
 	display: block;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+
   }
