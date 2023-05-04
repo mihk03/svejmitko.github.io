@@ -299,10 +299,10 @@
 			  <!-- Swiper -->
 			  <div class="swiper mySwiper">
 				<div class="swiper-wrapper">
-					<a class="swiper-slide" href="#t1">
+					<a class="swiper-slide" data-target="t1">
 						<img src="img/main.png" alt="Background Image" style="width: 100%; height: 100%; object-fit: cover;">
 					  </a>
-				  <div class="swiper-slide"><img src="img/salads.png" alt=""></div>
+				  <div class="swiper-slide" data-target="t2"><img src="img/salads.png" alt=""></div>
 				  <div class="swiper-slide"><img src="img/coiteils.png" alt=""></div>
 				  <div class="swiper-slide"><img src="img/slider1.jpg" alt=""></div>
 			
@@ -325,6 +325,8 @@
 				  },
 				  
 				});
+				
+
 			  </script>
 				
 			<!-- <div class="content">
@@ -334,9 +336,9 @@
 					<li class="tab"><a href="#t3">Коктейли</a></li>
 					<li class="tab"><a href="#t4">Drink</a></li>
 				</ul> -->
-				<div id="t1">
-					<p class="text-test">Основни Ястия:</p>
-					<div class="row">
+				<p class="text-test">Основни Ястия:</p>
+				<div id="t1" class="menu-section">
+					<div class="row" >
 						<div class="col s6">
 							<div class="entry"
 								style="background-image: url('img/bg-2.png'); background-size: cover; background-position: center; border-radius: 15px;">
@@ -463,7 +465,7 @@
 						</div>
 					</div>
 				</div>
-				<div id="t2">
+				<div id="t2" class="menu-section">
 					<div class="row">
 						<div class="col s6">
 							<div class="entry">
@@ -757,5 +759,30 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/custom.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script> // Get all swiper slides
+	const swiperSlides = document.querySelectorAll('.swiper-slide');
+	
+	// Get all menu sections
+	const menuSections = document.querySelectorAll('.menu-section');
+	
+	// Add click event listener to each swiper slide
+	swiperSlides.forEach(slide => {
+	  slide.addEventListener('click', () => {
+		// Get the target ID from the data attribute
+		const targetId = slide.getAttribute('data-target');
+	
+		// Hide all menu sections
+		menuSections.forEach(section => {
+		  section.style.display = 'none';
+		});
+	
+		// Show the corresponding menu section
+		const targetSection = document.getElementById(targetId);
+		if (targetSection) {
+		  targetSection.style.display = 'block';
+		}
+	  });
+	});
+</script>
 </body>
 </html>
